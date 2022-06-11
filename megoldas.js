@@ -1,6 +1,6 @@
 //1. Feladat
 function DiakInfo(nev, csoport, tipus) {
-    var szam = String(csoport);
+    var szam = String(csoport); //ha a csoport szám kisebb, mint 10 elétesz egy 0-t:  azaz 9 -> 09
     if (szam.length < 2) {
         szam = "0".concat(szam);
     }
@@ -13,4 +13,9 @@ function DiakInfo(nev, csoport, tipus) {
     }
     return szoveg;
 }
-document.write(DiakInfo("Minta Marton", 81, false));
+//2. Feladat
+function SzovegesErtekeles(jegy) {
+    var szorgalom = ["NA", "NA", "Hanyag", "Változó", "Jó", "Példás"];
+    var magatartas = ["NA", "NA", "Rossz", "Változó", "Jó", "Példás"];
+    return [szorgalom[jegy], magatartas[jegy]];
+}
