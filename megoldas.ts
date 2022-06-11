@@ -24,7 +24,7 @@ function HarommalOszthatokSzama(t: number[]): number {
 
 //4. Feladat
 function Nyeroszamok(mennyiseg: number, alsoHatar: number, felsoHatar: number): string[] {
-   var szamok: string[] = [];
+   var szamok: string[] = []; //feladatban nincs leírva, hogy szám tipust tartalmazó lista kell, hogy legyen 
    while (szamok.length != mennyiseg) {
       var generaltSzam: string = String(Math.floor(Math.random() * (felsoHatar + 1 - alsoHatar) + alsoHatar));
       if (!szamok.includes(generaltSzam)) {
