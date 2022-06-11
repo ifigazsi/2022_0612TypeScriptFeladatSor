@@ -23,13 +23,12 @@ function HarommalOszthatokSzama(t) {
 //4. Feladat
 function Nyeroszamok(mennyiseg, alsoHatar, felsoHatar) {
     var szamok = [];
-    felsoHatar++;
     while (szamok.length != mennyiseg) {
-        var generaltSzam = String(Math.floor(Math.random() * (felsoHatar - alsoHatar) + alsoHatar));
+        var generaltSzam = String(Math.floor(Math.random() * (felsoHatar + 1 - alsoHatar) + alsoHatar));
         if (!szamok.includes(generaltSzam)) {
             szamok.push(generaltSzam);
         }
     }
     return szamok;
 }
-document.write("vd " + Nyeroszamok(5, 1, 10));
+document.write("fvd: " + Nyeroszamok(5, 1, 10));

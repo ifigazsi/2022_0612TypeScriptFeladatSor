@@ -25,9 +25,8 @@ function HarommalOszthatokSzama(t: number[]): number {
 //4. Feladat
 function Nyeroszamok(mennyiseg: number, alsoHatar: number, felsoHatar: number): string[] {
    var szamok: string[] = [];
-   felsoHatar++;
    while (szamok.length != mennyiseg) {
-      var generaltSzam: string = String(Math.floor(Math.random() * (felsoHatar - alsoHatar) + alsoHatar));
+      var generaltSzam: string = String(Math.floor(Math.random() * (felsoHatar + 1 - alsoHatar) + alsoHatar));
       if (!szamok.includes(generaltSzam)) {
          szamok.push(generaltSzam);
       }
