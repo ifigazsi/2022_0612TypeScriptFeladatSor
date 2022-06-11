@@ -1,16 +1,9 @@
 
 //1. Feladat
 function DiakInfo(nev: string, csoport: number, tipus: boolean): string {
-   var szam: string = String(csoport) //ha a csoport szám kisebb, mint 10 elétesz egy 0-t:  azaz 9 -> 09
-   if (szam.length < 2) {
-      szam = `0${szam}`;
-   }
+   var szam: string = String(csoport).length == 1 ? szam = `0${csoport}` : szam = String(csoport)
    var szoveg: string = `${nev} [TEAM${szam}] - `;
-   if (tipus) {
-      szoveg += `Junior Frontend`
-   } else {
-      szoveg += `Webprogramozó`
-   }
+   tipus ? szoveg += "Junior Frontend" : szoveg += "Webprogramozó"
    return szoveg
 }
 
@@ -20,3 +13,5 @@ function SzovegesErtekeles(jegy: number): [string, string] {
    var magatartas: string[] = ["NA", "NA", "Rossz", "Változó", "Jó", "Példás"];
    return [szorgalom[jegy], magatartas[jegy]]
 }
+
+//3. Feladat
