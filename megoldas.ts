@@ -15,3 +15,12 @@ function SzovegesErtekeles(jegy: number): [string, string] {
 }
 
 //3. Feladat
+function HarommalOszthatokSzama(t: number[]): number {
+   var db: number = 0;
+   for (var szam of t) {
+      szam % 3 == 0 ? db += 1 : false
+   }
+   return db
+}
+
+document.write(HarommalOszthatokSzama([10, 23, 12, 24, 31, 33, 42, 20]));
