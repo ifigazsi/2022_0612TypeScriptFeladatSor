@@ -1,4 +1,3 @@
-
 //1. Feladat
 function DiakInfo(nev: string, csoport: number, tipus: boolean): string {
    var szam: string = String(csoport).length == 1 ? szam = `0${csoport}` : szam = String(csoport)
@@ -23,4 +22,15 @@ function HarommalOszthatokSzama(t: number[]): number {
    return db
 }
 
-document.write(HarommalOszthatokSzama([10, 23, 12, 24, 31, 33, 42, 20]));
+//4. Feladat
+function Nyeroszamok(mennyiseg: number, alsoHatar: number, felsoHatar: number): string[] {
+   var szamok: string[] = [];
+   felsoHatar++;
+   while (szamok.length != mennyiseg) {
+      var generaltSzam: string = String(Math.floor(Math.random() * (felsoHatar - alsoHatar) + alsoHatar));
+      if (!szamok.includes(generaltSzam)) {
+         szamok.push(generaltSzam);
+      }
+   }
+   return szamok
+}

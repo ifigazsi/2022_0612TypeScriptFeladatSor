@@ -20,4 +20,16 @@ function HarommalOszthatokSzama(t) {
     }
     return db;
 }
-document.write(HarommalOszthatokSzama([10, 23, 12, 24, 31, 33, 42, 20]));
+//4. Feladat
+function Nyeroszamok(mennyiseg, alsoHatar, felsoHatar) {
+    var szamok = [];
+    felsoHatar++;
+    while (szamok.length != mennyiseg) {
+        var generaltSzam = String(Math.floor(Math.random() * (felsoHatar - alsoHatar) + alsoHatar));
+        if (!szamok.includes(generaltSzam)) {
+            szamok.push(generaltSzam);
+        }
+    }
+    return szamok;
+}
+document.write("vd " + Nyeroszamok(5, 1, 10));
