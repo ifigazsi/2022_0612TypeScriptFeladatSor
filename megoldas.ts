@@ -1,4 +1,4 @@
-function DiakInfo(nev: string, csoport: number, tipus: boolean): string {
+function DiakInfo(nev: string, csoport: number, tipus: boolean): string { //8 -> TEAM08, 11 -> TEAM11
    var szam: string = String(csoport).length == 1 ? szam = `0${csoport}` : szam = String(csoport)
    var szoveg: string = `${nev} [TEAM${szam}] - `;
    tipus ? szoveg += "Junior Frontend" : szoveg += "Webprogramozó"
